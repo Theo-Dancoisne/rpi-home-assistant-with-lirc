@@ -1,0 +1,15 @@
+services:
+  homeassistant:
+    container_name: homeassistant
+    # image: "ghcr.io/home-assistant/home-assistant:stable"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    devices:
+      - /dev/gpiomem:/dev/gpiomem
+    volumes:
+      - /var/docker/applications/home-assistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host

@@ -1,0 +1,19 @@
+-- not used, not tested
+begin
+    remote = LG_STEREO_REMOTE
+    button = KEY_POWER
+    prog   = home-assistant
+    config = KEY_POWER
+end
+begin
+    remote = LG_STEREO_REMOTE
+    button = KEY_VOLUME_UP
+    prog   = home-assistant
+    config = KEY_VOLUME_UP
+end
+begin
+    remote = LG_STEREO_REMOTE
+    button = KEY_VOLUME_DOWN
+    prog   = home-assistant
+    config = KEY_VOLUME_DOWN
+end
