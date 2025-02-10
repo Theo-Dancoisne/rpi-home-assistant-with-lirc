@@ -1,15 +1,14 @@
 services:
   homeassistant:
     container_name: homeassistant
-    # image: "ghcr.io/home-assistant/home-assistant:stable"
     build:
       context: .
       dockerfile: Dockerfile
     devices:
-      - /dev/gpiomem:/dev/gpiomem
+      - /dev/gpiomem:/dev/gpiomem             # Share Raspberry Pi GPIOs devices
     volumes:
-      - /var/docker/applications/home-assistant/config:/config
-      - /etc/localtime:/etc/localtime:ro
+      - ./config:/config                      # Home Assistant config directory only
+      - /etc/localtime:/etc/localtime:ro      # Linux hosts only, you can also use environment: - TZ=Country/City
     restart: unless-stopped
     privileged: true
     network_mode: host

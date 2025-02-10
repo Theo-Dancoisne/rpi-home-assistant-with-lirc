@@ -1,4 +1,7 @@
--- not used, not tested
+-- Part of the LIRC Home Assistant integration steps
+-- https://lirc.org/html/configure.html#lircrc_format
+
+-- not used, not tested!
 begin
     remote = LG_STEREO_REMOTE
     button = KEY_POWER

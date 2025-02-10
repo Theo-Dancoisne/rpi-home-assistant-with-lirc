@@ -1,2 +1,5 @@
-# Home Assistant user config
-/config
+# Home Assistant user config, that includes credentials
+/config/*
+# Home Assistant user config files I need to show you, edit as needed
+!/config/automations.yaml
+!/config/configuration.yaml
